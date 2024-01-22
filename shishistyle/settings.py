@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = quote_plus(os.environ['secret_key']) 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['debug']
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
