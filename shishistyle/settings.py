@@ -27,7 +27,7 @@ SECRET_KEY = quote_plus(os.environ['secret_key'])
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app','www.theshishistyle.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 
@@ -88,6 +88,8 @@ WSGI_APPLICATION = 'shishistyle.wsgi.app'
 
 user=quote_plus(os.environ['user'])
 password= quote_plus(os.environ['pass'])
+uri = 'mongodb+srv://"+user+":"+password+"@cluster0.5babfs8.mongodb.net/?retryWrites=true&w=majority'
+print(uri)
 
 DATABASES = {
         'default': {
@@ -135,7 +137,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "static/blog"
+STATIC_URL = "static/"
 
 # Add these new lines
 STATICFILES_DIRS = (
