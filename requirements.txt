@@ -1,8 +1,6 @@
 appdirs==1.4.4
 asgiref==3.7.2
 atomicwrites==1.4.0
-backports.weakref==1.0.post1
-clyent==1.2.2
 Django==4.1.13
 django-ckeditor==6.7.0
 django-js-asset==2.2.0
