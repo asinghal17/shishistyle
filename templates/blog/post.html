@@ -1,0 +1,56 @@
+{% extends 'blog/skeleton.html' %}
+
+{% block content %} 
+
+{% load static %}
+<main class="main pt-4">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-9">
+
+        <article class="card mb-4">
+          <header class="card-header text-center">
+            <div class="card-meta">
+              <a href=""><time class="timeago" datetime="{{ post.created_at|date }}">{{ post.created_at|date }}</time></a> in <a href="page-category.html">{{ post.get_category_display }}</a>
+            </div>
+            <a href="">
+              <h1 class="card-title">{{ post.title }}</h1>
+            </a>
+          </header>
+          <a href="">
+            <img class="card-img img-thumbnail" src="{{ post.cover_img }}" alt="" />
+          </a>
+          <div class="card-body"> {{ post.content|safe }}</div>
+        </article><!-- /.card -->
+
+      </div>
+      <div class="col-md-3 ms-auto">
+
+        <aside class="sidebar">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h4 class="card-title">About Shishi Style</h4>
+              <p class="card-text">Never Try, never Know. The world through my eyes and lens.</p>
+            </div>
+          </div><!-- /.card -->
+        </aside>
+
+        <aside class="sidebar sidebar-sticky">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h4 class="card-title">Tags</h4>
+              <a class="btn btn-light btn-sm mb-1" href="page-category.html">{{ post.get_category_display }}</a>
+            </div>
+          </div><!-- /.card -->
+        </aside>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+
+{% endblock %}
+

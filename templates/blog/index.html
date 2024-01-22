@@ -1,0 +1,39 @@
+{% extends 'blog/skeleton.html' %}
+
+{% block content %} 
+
+
+<main class="main pt-4">
+
+  <div class="container">
+
+    <div class="row">
+      {% for post in post_list %}
+      <div class="col-md-4">
+        <article class="card mb-4">
+          <header class="card-header">
+            <div class="card-meta">
+              <a href="#"><time class="timeago" datetime="">{{ post.created_at|date }}</time></a> in <a href="page-category.html">{{ post.get_category_display }}</a>
+            </div>
+            <a href="post-image.html">
+              <h4 class="card-title">{{ post.title }}</h4>
+            </a>
+          </header>
+          <a href="{% url 'post-detail' post.slug  %}">
+            <img class="card-img" src="{{ post.cover_img }}" alt="" />
+          </a>
+          <div class="card-body">
+            <p class="card-text"> {{ post.sub_heading|safe }} </p>
+          </div>
+        </article><!-- /.card -->
+
+      </div>
+      {% endfor %}  
+    </div>
+  </div>
+
+</main>
+
+
+{% endblock %}
+
