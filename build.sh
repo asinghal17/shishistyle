@@ -14,6 +14,6 @@ python3 -m pip install -r requirements.txt
 # echo "Migrating..."
 # python3 manage.py migrate
 
-# # Collect static files
-# echo "Collecting static files..."
-# python3 manage.py collectstatic --noinput
+# Collect static files
+echo "Collecting static files..."
+python3 manage.py collectstatic --noinput
