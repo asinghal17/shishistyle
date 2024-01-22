@@ -6,7 +6,7 @@ python3 -m pip install -r requirements.txt
 
 # Make migrations
 echo "Making migrations..."
-python3 manage.py makemigrations
+python3 manage.py makemigrations blog
 
 # Migrate the database
 echo "Migrating..."
