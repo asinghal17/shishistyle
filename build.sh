@@ -2,7 +2,7 @@
 
 # Build the project
 echo "Building the project..."
-python3 -m pip install -r requirements.txt
+python3 -m pip3 install -r requirements.txt
 
 # Make migrations
 echo "Making migrations..."
