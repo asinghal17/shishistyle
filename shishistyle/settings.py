@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'shishistyle.wsgi.app'
 
 user=quote_plus(os.environ['user'])
 password= quote_plus(os.environ['pass'])
-uri = 'mongodb+srv://"+user+":"+password+"@cluster0.5babfs8.mongodb.net/?retryWrites=true&w=majority'
+uri = "mongodb+srv://"+user+":"+password+"@cluster0.5babfs8.mongodb.net/?retryWrites=true&w=majority"
 print(uri)
 
 DATABASES = {
@@ -97,7 +97,7 @@ DATABASES = {
             'NAME': 'blog',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
-                'host': 'mongodb+srv://"+user+":"+password+"@cluster0.5babfs8.mongodb.net/?retryWrites=true&w=majority'
+                'host': "mongodb+srv://"+user+":"+password+"@cluster0.5babfs8.mongodb.net/?retryWrites=true&w=majority"
             }  
         }
 }
