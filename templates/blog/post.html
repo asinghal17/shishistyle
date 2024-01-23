@@ -19,9 +19,9 @@
               <h1 class="card-title">{{ post.title }}</h1>
             </a>
           </header>
-          <a href="">
-            <img class="card-img" src="{{ post.cover_img }}" alt="" />
-          </a>
+          <div class="row">
+            <a href=""><img class="intro-block active" src="{{ post.cover_img }}" alt="" /></a>
+          </div>
           <div class="card-body"> {{ post.content|safe }}</div>
         </article><!-- /.card -->
 
